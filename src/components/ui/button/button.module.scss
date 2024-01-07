@@ -1,26 +1,115 @@
+@import '@/styles/mixins';
+
 .button {
   all: unset;
+
   cursor: pointer;
+
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+
+  padding: 6px 28px;
+
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-m);
+
+  border-radius: 4px;
 
   &:focus-visible {
     outline: 2px solid var(--color-info-500);
   }
+
+  &:disabled {
+    cursor: default;
+  }
 }
 
 .primary {
-  background-color: red;
+  background-color: var(--color-accent-500);
+  box-shadow: 0 4px 18px 0 rgb(140 97 255 / 35%);
+
+  &:hover {
+    background-color: var(--color-accent-300);
+  }
+
+  &:active {
+    background-color: var(--color-accent-700);
+  }
+
+  &:disabled {
+    color: var(--color-light-900);
+    background-color: var(--color-accent-900);
+  }
 }
 
 .secondary {
-  background-color: green;
+  background-color: var(--color-dark-300);
+  box-shadow: 0 4px 4px 0 rgb(77 86 96 / 13%);
+
+  &:hover {
+    background-color: var(--color-dark-100);
+  }
+
+  &:active {
+    background-color: var(--color-dark-500);
+  }
+
+  &:disabled {
+    color: var(--color-light-900);
+    background-color: var(--color-dark-300);
+    box-shadow: 0 2px 10px 0 rgb(109 109 109 / 25%);
+  }
 }
 
 .tertiary {
-  background-color: blue;
+  @include border(--color-accent-500);
+
+  color: var(--color-accent-500);
+  background-color: inherit;
+
+  &:hover {
+    @include border(--color-accent-700);
+
+    background-color: var(--color-dark-500);
+  }
+
+  &:active {
+    @include border(--color-accent-700);
+
+    background-color: var(--color-accent-900);
+  }
+
+  &:disabled {
+    @include border(--color-accent-900);
+
+    pointer-events: none;
+    color: var(--color-accent-900);
+  }
 }
 
 .link {
-  background-color: yellow;
+  padding: 6px 10px;
+
+  font-size: var(--font-size-m);
+  color: var(--color-accent-500);
+
+  border: none;
+  border-radius: 50px;
+
+  &:hover {
+    color: var(--color-accent-300);
+  }
+
+  &:active {
+    color: var(--color-accent-700);
+  }
+
+  &:disabled {
+    color: var(--color-accent-900);
+  }
 }
 
 .fullWidth {
