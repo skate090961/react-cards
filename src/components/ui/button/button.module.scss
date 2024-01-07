@@ -6,15 +6,9 @@
   cursor: pointer;
 
   display: inline-flex;
-  gap: 10px;
-  align-items: center;
   justify-content: center;
 
   padding: 6px 28px;
-
-  font-size: var(--font-size-s);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-m);
 
   border-radius: 4px;
 
@@ -92,10 +86,7 @@
 
 .link {
   padding: 6px 10px;
-
-  font-size: var(--font-size-m);
   color: var(--color-accent-500);
-
   border: none;
   border-radius: 50px;
 
@@ -110,6 +101,13 @@
   &:disabled {
     color: var(--color-accent-900);
   }
+}
+
+.typography {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  color: inherit;
 }
 
 .fullWidth {

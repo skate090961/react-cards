@@ -46,6 +46,8 @@ export const Secondary: Story = {
     variant: 'secondary',
   },
 }
+
+//TODO: svg convert to component
 export const SecondaryWithChildren: Story = {
   args: {
     children: (
