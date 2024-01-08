@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import icon from '@/assets/icons/log-out.svg'
+import LogOutIcon from '@/assets/icons/LogOutIcon'
 
 import { Button } from './'
 
@@ -31,7 +31,7 @@ export const PrimaryWithChildren: Story = {
   args: {
     children: (
       <>
-        <img alt={'icon'} src={icon} />
+        <LogOutIcon />
         Primary Button
       </>
     ),
@@ -47,12 +47,11 @@ export const Secondary: Story = {
   },
 }
 
-//TODO: svg convert to component
 export const SecondaryWithChildren: Story = {
   args: {
     children: (
       <>
-        <img alt={'icon'} src={icon} />
+        <LogOutIcon />
         Secondary Button
       </>
     ),

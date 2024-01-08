@@ -1,3 +1,9 @@
 @mixin border($borderColor) {
   border: 1px solid var($borderColor);
 }
+
+@mixin typography($fontSize, $lineHeight, $fontWeight) {
+  font-size: var($fontSize);
+  font-weight: var($fontWeight);
+  line-height: var($lineHeight);
+}

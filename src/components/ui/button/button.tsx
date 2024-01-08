@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ElementType, ReactNode } from 'react'
+import { ComponentPropsWithoutRef, ElementType } from 'react'
 
 import { Typography } from '@/components/ui/typography'
 
@@ -7,8 +7,6 @@ import s from './button.module.scss'
 type ButtonVariant = 'link' | 'primary' | 'secondary' | 'tertiary'
 export type ButtonProps<T extends ElementType = 'button'> = {
   as?: T
-  children: ReactNode
-  className?: string
   fullWidth?: boolean
   variant?: ButtonVariant
 } & ComponentPropsWithoutRef<T>
