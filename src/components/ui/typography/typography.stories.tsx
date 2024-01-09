@@ -15,6 +15,7 @@ const typographyVariants: TypographyVariant[] = [
   'overline',
   'link1',
   'link2',
+  'error',
 ]
 
 const meta = {

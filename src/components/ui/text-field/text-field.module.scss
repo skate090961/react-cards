@@ -1,0 +1,89 @@
+@import 'src/styles/mixins';
+
+.root {
+  .label {
+    color: var(--color-dark-100);
+
+    &.disabled {
+      color: var(--color-dark-300);
+    }
+  }
+
+  .container {
+    position: relative;
+
+    .button {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+
+      display: grid;
+      place-items: center;
+
+      &:disabled {
+        opacity: 0.3;
+      }
+    }
+
+    .searchIcon {
+      position: absolute;
+      top: 50%;
+      left: 12px;
+      transform: translateY(-50%);
+
+      display: grid;
+      place-items: center;
+    }
+
+    .input {
+      @include typography(--font-size-m, --line-height-m, --font-weight-regular);
+      @include border(--color-dark-300);
+
+      width: 100%;
+      height: 36px;
+      padding: 6px 12px;
+
+      color: var(--color-light-100);
+
+      background-color: inherit;
+      border-radius: 2px;
+      outline: none;
+
+      transition: 0.3s;
+
+      &::placeholder {
+        color: var(--color-dark-100);
+      }
+
+      &.search {
+        padding-left: 41px;
+      }
+
+      &:disabled {
+        pointer-events: none;
+        color: var(--color-dark-300);
+        border-color: var(--color-dark-300);
+      }
+
+      &:focus,
+      &:active:enabled {
+        @include border(--color-light-100);
+      }
+
+      &:hover:enabled {
+        background-color: var(--color-dark-700);
+        border-color: var(--color-dark-100);
+      }
+
+      &.error {
+        color: var(--color-danger-300);
+        border-color: var(--color-danger-300);
+
+        &:focus {
+          color: var(--color-light-100);
+        }
+      }
+    }
+  }
+}

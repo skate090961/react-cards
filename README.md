@@ -1,30 +1,27 @@
-# React + TypeScript + Vite
+# React Flash Cards
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p>
+  <img src="src/assets/icons/readme-logo.jpeg" style="width: 100%" alt="logo" />
+</p>
 
-Currently, two official plugins are available:
+React + TypeScript SPA 🚀
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<hr style="background-color: #8c61ff">
 
-## Expanding the ESLint configuration
+### Links:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+> [UI-kit](https://www.vercel.app/) on Storybook
+>
+> [Flash-Cards](https://www.vercel.app/) - web application
 
-- Configure the top-level `parserOptions` property like this:
+<hr style="background-color: #8c61ff">
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+### Description:
+In this application you can create a set of cards on absolutely any topic and use them for memorization. You can also
+look at decks of other users. The main page contains filtering, navigation and sorting elements, while the decks
+themselves are presented in table form. The application implements authorization, registration and password recovery.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+<hr style="background-color: #8c61ff">
+
+
+

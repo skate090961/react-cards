@@ -6,6 +6,7 @@ export type TypographyVariant =
   | 'body1'
   | 'body2'
   | 'caption'
+  | 'error'
   | 'h1'
   | 'h2'
   | 'h3'
@@ -22,7 +23,7 @@ export type TypographyProps<T extends ElementType = 'p'> = {
 } & ComponentPropsWithoutRef<T>
 
 export const Typography = <T extends ElementType = 'p'>(
-  props: TypographyProps<T> & Omit<ComponentPropsWithoutRef<T>, keyof TypographyProps<T>>
+  props: TypographyProps<T> & ComponentPropsWithoutRef<T>
 ) => {
   const { as: Component = 'p', className, variant = 'body1', ...rest } = props
 
