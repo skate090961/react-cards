@@ -1,4 +1,4 @@
-import logo from '@/assets/icons/logo.png'
+import logo from '@/assets/icons/logo/logo.png'
 import { Button } from '@/components/ui/button'
 
 export function App() {

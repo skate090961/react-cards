@@ -1,7 +1,7 @@
 # React Flash Cards
 
 <p>
-  <img src="src/assets/icons/readme-logo.jpeg" style="width: 100%" alt="logo" />
+  <img src="src/assets/icons/logo/readme-logo.jpeg" style="width: 100%" alt="logo" />
 </p>
 
 React + TypeScript SPA 🚀

@@ -1,0 +1,96 @@
+@import 'src/styles/mixins';
+
+.root {
+  .label {
+    @include typography(--font-size-s, --line-height-m, --font-weight-regular);
+
+    cursor: pointer;
+    user-select: none;
+
+    display: flex;
+    align-items: center;
+
+    width: max-content;
+
+    color: var(--color-light-100);
+
+    &.disabled {
+      cursor: auto;
+      color: var(--color-dark-100);
+    }
+  }
+
+  .checkbox {
+    all: unset;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: inherit;
+  }
+
+  .indicator {
+    position: absolute;
+    z-index: 200;
+
+    display: block;
+
+    width: 24px;
+    height: 24px;
+
+    border-radius: 2px;
+
+    fill: var(--color-light-100);
+
+    &.disabled {
+      cursor: auto;
+      fill: var(--color-dark-100);
+    }
+  }
+
+  .unCheck {
+    position: absolute;
+    z-index: 100;
+
+    width: 18px;
+    height: 18px;
+
+    border: 2px solid var(--color-light-900);
+    border-radius: 2px;
+
+    &.disabled {
+      cursor: auto;
+      border-color: var(--color-dark-100);
+    }
+  }
+}
+
+.checkboxWrapper {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+
+  border-radius: 50%;
+
+  transition: 0.3s;
+
+  &:hover:not(.disabled) {
+    background-color: var(--color-dark-500);
+  }
+
+  &:active:not(.disabled) {
+    background-color: var(--color-dark-100);
+  }
+
+  &.disabled {
+    cursor: auto;
+  }
+}
