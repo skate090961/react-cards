@@ -1,0 +1,107 @@
+@import '@/styles/mixins';
+
+.trigger {
+  @include border(--color-dark-300);
+
+  cursor: pointer;
+  user-select: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: 0.37rem 0.75rem;
+
+  color: var(--color-light-100);
+
+  background-color: inherit;
+  border-radius: 0.125rem;
+  outline: none;
+
+  transition: 0.3s;
+
+  .icon {
+    width: 16px;
+    height: 16px;
+    fill: var(--color-light-100);
+    transition: 0.3s;
+
+    .disabled {
+      fill: var(--color-dark-300);
+    }
+  }
+
+  &[data-state='open'] {
+    color: var(--color-light-100);
+    border-color: var(--color-dark-100);
+
+    .icon {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &[data-state='closed'] {
+    .icon {
+      transform: rotate(-360deg);
+    }
+  }
+
+  &:focus-visible {
+    border: 2px solid var(--color-info-700);
+    transition: 0s;
+  }
+
+  &:hover:not(&[data-disabled]) {
+    background-color: var(--color-dark-500);
+  }
+
+  &[data-disabled] {
+    cursor: initial;
+    color: var(--color-dark-300);
+    border-color: var(--color-dark-300);
+  }
+}
+
+.content {
+  @include border(--color-dark-100);
+
+  display: inline-block;
+
+  width: var(--radix-select-trigger-width);
+  max-height: var(--radix-select-content-available-height);
+
+  background-color: var(--color-dark-900);
+  border-top: none;
+  border-radius: 0.125rem;
+}
+
+.item {
+  cursor: pointer;
+  user-select: none;
+
+  padding: 0.37rem 0.75rem;
+
+  outline: none;
+
+  transition: 0.3s;
+
+  &:hover,
+  &:focus-visible,
+  &[data-state='checked'] {
+    color: var(--color-accent-300);
+    background-color: var(--color-accent-900);
+  }
+}
+
+.group {
+  background: none;
+}
+
+.label {
+  color: var(--color-dark-100);
+
+  &.disabled {
+    color: var(--color-dark-300);
+  }
+}
